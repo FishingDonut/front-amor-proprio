@@ -46,11 +46,11 @@ export default function Testimonials({ texts, testimonials }) {
                                 displayTestimonials.map((test, idx) => (
                                     <div key={idx} className="carousel-slide">
                                         <div className="testimonial-quote-icon">
-                                            <Quote style={{ width: '48px', height: '48px', transform: 'rotate(180deg)' }} />
+                                            <img src="/assets/aspas-testemunha.png" alt="aspas" style={{ width: '40px', height: 'auto' }} />
                                         </div>
                                         <p className="testimonial-message">{test.message || test.mensage || ""}</p>
                                         <div className="testimonial-divider">
-                                            <Heart size={16} />
+                                            <img src="/assets/coracao-testemunha.png" alt="coração" style={{ width: '20px', height: 'auto' }} />
                                         </div>
                                         <div className="testimonial-user">
                                             <div className="testimonial-avatar-wrapper" style={{ width: '60px', height: '60px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 12px', background: '#fce7f3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

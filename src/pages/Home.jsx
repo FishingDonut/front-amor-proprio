@@ -93,8 +93,8 @@ export default function Home() {
                 setTexts(mappedTexts);
 
                 const mappedMedia = {
-                    logo: getMediaUrl(1) || 'https://i.ibb.co/LXTbJMtQ/Novo-Projeto.png',
-                    hero: getMediaUrl(6) || 'https://i.ibb.co/208rhqTG/4006155557907369852.png',
+                    logo: getMediaUrl(1) || '/assets/amor-proprio-sem-fundo.png',
+                    hero: getMediaUrl(6) || '/assets/velha-com-fundo-recortado.png',
                     icons: {
                         why1: getMediaUrl(2),
                         why2: getMediaUrl(3),

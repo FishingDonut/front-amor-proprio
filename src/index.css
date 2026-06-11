@@ -138,7 +138,7 @@ header .container {
 }
 
 .logo img {
-    height: 48px;
+    height: 64px;
     object-fit: contain;
 }
 
@@ -188,17 +188,38 @@ nav ul a:hover, nav ul a.active {
     padding: 80px 0;
 }
 
-.hero-watermark {
+.hero-hands-watermark {
     position: absolute;
-    right: 35%;
+    left: -50px;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 580px;
+    height: auto;
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-hands-watermark img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-ribbon-watermark {
+    position: absolute;
+    right: -80px;
     top: 50%;
     transform: translateY(-50%);
-    width: 600px;
-    height: 600px;
-    opacity: 0.08;
-    color: #E2E8F0;
-    pointer-events: none;
+    width: 500px;
+    height: auto;
+    opacity: 0.15;
     z-index: 1;
+    pointer-events: none;
+}
+
+.hero-ribbon-watermark img {
+    width: 100%;
+    height: auto;
 }
 
 .hero-wrapper {
@@ -252,7 +273,7 @@ nav ul a:hover, nav ul a.active {
 }
 
 .btn-hero-primary {
-    background-color: var(--primary-pink);
+    background-color: #e69ea8;
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
@@ -264,14 +285,14 @@ nav ul a:hover, nav ul a.active {
 }
 
 .btn-hero-primary:hover {
-    background-color: var(--primary-pink-hover);
+    background-color: #d88f99;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(232, 74, 144, 0.25);
+    box-shadow: 0 8px 20px rgba(230, 158, 168, 0.25);
 }
 
 .btn-hero-secondary {
-    background-color: rgba(232, 74, 144, 0.15);
-    color: var(--primary-pink);
+    background-color: rgba(230, 158, 168, 0.15);
+    color: #e69ea8;
     padding: 14px 32px;
     border-radius: 50px;
     font-weight: 700;
@@ -282,7 +303,7 @@ nav ul a:hover, nav ul a.active {
 }
 
 .btn-hero-secondary:hover {
-    background-color: rgba(232, 74, 144, 0.25);
+    background-color: rgba(230, 158, 168, 0.25);
     transform: translateY(-2px);
 }
 
@@ -687,9 +708,9 @@ nav ul a:hover, nav ul a.active {
     max-width: 120px;
 }
 
-.testimonial-divider svg {
-    color: var(--primary-pink);
-    fill: #FCD3DE;
+.testimonial-divider img {
+    max-height: 20px;
+    object-fit: contain;
 }
 
 .testimonial-name {
@@ -775,7 +796,7 @@ footer {
 }
 
 .footer-brand .logo img {
-    height: 48px;
+    height: 56px;
     object-fit: contain;
 }
 

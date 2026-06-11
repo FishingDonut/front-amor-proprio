@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
-import localThumb from '../assets/tumb.png';
+import localThumb from '../assets/tumb-de-video.png';
 
 export default function About({ texts }) {
     const [isPlaying, setIsPlaying] = useState(false);

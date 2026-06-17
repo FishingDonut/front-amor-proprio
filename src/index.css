@@ -1129,14 +1129,14 @@ footer {
 
 /* Admin Panel Page */
 .admin-body {
-    background-color: #0F0F12;
+    background-color: #414141;
     color: #E2E8F0;
     min-height: 100vh;
 }
 
 .admin-header {
-    background-color: #16161A;
-    border-bottom: 1px solid #2A2A35;
+    background: #272727;
+    border-bottom: 1px solid #333;
     padding: 16px 0;
     position: sticky;
     top: 0;
@@ -1167,22 +1167,23 @@ footer {
 }
 
 .admin-logout-btn {
-    border: 1px solid #444455;
+    border: 1.5px solid #E84A90;
     background: transparent;
-    color: #FF5A79;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    color: #E84A90;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
     transition: var(--transition-smooth);
+    font-weight: 500;
 }
 
 .admin-logout-btn:hover {
-    background-color: rgba(255, 90, 121, 0.1);
-    border-color: #FF5A79;
+    background-color: rgba(232, 74, 144, 0.1);
+    border-color: #E84A90;
 }
 
 .admin-content-section {
@@ -1200,8 +1201,8 @@ footer {
 }
 
 .admin-section-header p {
-    color: #8A8A9E;
-    font-size: 1rem;
+    color: #BBBBBB;
+    font-size: 1.1rem;
 }
 
 /* Section Editor Grid (cards) */
@@ -1212,8 +1213,8 @@ footer {
 }
 
 .admin-card {
-    background-color: #16161A;
-    border: 1px solid #2A2A35;
+    background-color: #414141;
+    border: 1px solid #666;
     border-radius: 12px;
     padding: 24px;
     display: flex;
@@ -1223,8 +1224,8 @@ footer {
 }
 
 .admin-card:hover {
-    border-color: #3F3F50;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-color: #888;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 .admin-card-info {
@@ -1256,7 +1257,7 @@ footer {
 
 .admin-card-details p {
     font-size: 0.9rem;
-    color: #8A8A9E;
+    color: #BBBBBB;
 }
 
 .admin-card-actions {
@@ -1266,12 +1267,12 @@ footer {
 }
 
 .admin-circle-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: #23232A;
-    border: 1px solid #3A3A4A;
-    color: #E2E8F0;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1.5px solid #BBBBBB;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1280,10 +1281,11 @@ footer {
 }
 
 .admin-circle-btn:hover {
-    background-color: var(--primary-pink);
-    border-color: var(--primary-pink);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
     color: var(--text-light);
 }
+
 
 .admin-circle-btn.btn-delete:hover {
     background-color: #FF5A79;
@@ -1292,7 +1294,7 @@ footer {
 
 /* Content management tables / sublists inside dashboard */
 .admin-sub-card {
-    background-color: #16161A;
+    background-color: #272727;
     border: 1px solid #2A2A35;
     border-radius: 12px;
     padding: 24px;
@@ -1331,7 +1333,7 @@ footer {
 }
 
 .modal-container {
-    background-color: #16161A;
+    background-color: #1d1d1c;
     border: 1px solid #2A2A35;
     border-radius: 16px;
     width: 100%;
@@ -1350,6 +1352,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #1d1d1c;
 }
 
 .modal-header h2 {
@@ -1376,6 +1379,7 @@ footer {
     padding: 24px;
     overflow-y: auto;
     flex: 1;
+    max-height: calc(90vh - 160px); /* Ensure there's enough space for header and footer */
 }
 
 .modal-body label {
@@ -1390,9 +1394,9 @@ footer {
 .modal-body input, .modal-body textarea, .modal-body select {
     width: 100%;
     padding: 12px 14px;
-    background-color: #202026;
-    border: 1.5px solid #2A2A35;
-    border-radius: 8px;
+    background-color: #1d1d1c;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
@@ -1435,7 +1439,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
-    background-color: #121215;
+    background-color: #1d1d1c;
 }
 
 .btn-cancel {

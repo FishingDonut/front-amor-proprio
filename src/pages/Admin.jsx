@@ -378,15 +378,21 @@ export default function Admin() {
             {/* Header */}
             <header className="admin-header">
                 <div className="container">
-                    <div className="admin-logo">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E84A90" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                        <div style={{display: 'flex', flexDirection: 'column'}}>
-                            <span className="admin-title-panel" style={{fontSize: '1.2rem', fontWeight: 'bold', color: '#E84A90'}}>AMOR PRÓPRIO</span>
-                            <span style={{fontSize: '0.8rem', color: '#8A8A9E'}}>Gerencie os conteúdos do site</span>
+                    <div className="admin-logo" style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#E84A90" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        <div style={{display: 'flex', flexDirection: 'column', lineHeight: '1.1'}}>
+                            <span style={{fontSize: '1.1rem', fontWeight: '800', color: '#E84A90', letterSpacing: '0.5px'}}>AMOR</span>
+                            <span style={{fontSize: '1.1rem', fontWeight: '800', color: '#E84A90', letterSpacing: '0.5px'}}>PRÓPRIO</span>
                         </div>
                     </div>
+                    
+                    <div style={{textAlign: 'left', flex: 1, marginLeft: '60px'}}>
+                        <h2 style={{color: '#E84A90', fontSize: '1.4rem', fontWeight: '700', margin: 0}}>Painel Administrativo</h2>
+                        <span style={{fontSize: '0.95rem', color: '#FFFFFF', opacity: 0.9}}>Gerencie os conteudos do site</span>
+                    </div>
+
                     <button className="admin-logout-btn" onClick={handleLogout}>
-                        <LogOut size={16} /> sair
+                        <LogOut size={18} /> sair
                     </button>
                 </div>
             </header>
@@ -408,21 +414,21 @@ export default function Admin() {
                                 <div className="admin-card-info">
                                     <div className="admin-card-thumbnail" style={{
                                         backgroundImage: `url('${getMediaUrl(6) || 'https://i.ibb.co/208rhqTG/4006155557907369852.png'}')`,
-                                        width: '180px', height: '100px'
+                                        width: '280px', height: '150px', borderRadius: '12px'
                                     }}>
-                                        {!getMediaUrl(6) && <ImageIcon size={30} />}
+                                        {!getMediaUrl(6) && <ImageIcon size={40} />}
                                     </div>
-                                    <div className="admin-card-details">
-                                        <h3 style={{color: '#E84A90', fontWeight: 'bold'}}>Banner Principal</h3>
-                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.1rem'}}>{getTextContent(2, 'Empoderamento e Acolhimento')}</h4>
-                                        <p style={{maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'}}>
+                                    <div className="admin-card-details" style={{marginLeft: '12px'}}>
+                                        <h3 style={{color: '#E84A90', fontWeight: '700', fontSize: '1.5rem', marginBottom: '8px'}}>Banner Principal</h3>
+                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.2rem', fontWeight: '600'}}>{getTextContent(2, 'Empoderamento e Acolhimento')}</h4>
+                                        <p style={{maxHeight: '60px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', fontSize: '1.1rem', color: '#FFFFFF', opacity: 0.8}}>
                                             {getTextContent(3, 'Carregando descrição...')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="admin-card-actions">
                                     <button className="admin-circle-btn" onClick={openBannerModal}>
-                                        <Edit3 size={18} />
+                                        <Edit3 size={24} />
                                     </button>
                                 </div>
                             </div>
@@ -432,21 +438,21 @@ export default function Admin() {
                                 <div className="admin-card-info">
                                     <div className="admin-card-thumbnail" style={{
                                         backgroundImage: `url('${getMediaUrl(7) || 'https://i.ibb.co/208rhqTG/4006155557907369852.png'}')`,
-                                        width: '180px', height: '100px'
+                                        width: '280px', height: '150px', borderRadius: '12px'
                                     }}>
-                                        {!getMediaUrl(7) && <ImageIcon size={30} />}
+                                        {!getMediaUrl(7) && <ImageIcon size={40} />}
                                     </div>
-                                    <div className="admin-card-details">
-                                        <h3 style={{color: '#E84A90', fontWeight: 'bold'}}>Sobre Nós</h3>
-                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.1rem'}}>Venha nos conhecer e ajude-nos</h4>
-                                        <p style={{maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'}}>
+                                    <div className="admin-card-details" style={{marginLeft: '12px'}}>
+                                        <h3 style={{color: '#E84A90', fontWeight: '700', fontSize: '1.5rem', marginBottom: '8px'}}>Sobre Nós</h3>
+                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.2rem', fontWeight: '600'}}>Venha nos conhecer e ajude-nos</h4>
+                                        <p style={{maxHeight: '60px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', fontSize: '1.1rem', color: '#FFFFFF', opacity: 0.8}}>
                                             {getTextContent(4, 'Carregando texto do sobre nós...')}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="admin-card-actions">
                                     <button className="admin-circle-btn" onClick={openAboutModal}>
-                                        <Edit3 size={18} />
+                                        <Edit3 size={24} />
                                     </button>
                                 </div>
                             </div>
@@ -454,19 +460,19 @@ export default function Admin() {
                             {/* Card 3: Valores */}
                             <div className="admin-card">
                                 <div className="admin-card-info">
-                                    <div className="admin-card-thumbnail" style={{width: '180px', height: '100px', backgroundColor: '#202026', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: '#E84A90'}}>
-                                        <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>{getTextContent(6, 'R$ 15k')}</span>
-                                        <span style={{fontSize: '0.7rem', color: '#8A8A9E'}}>Estatísticas</span>
+                                    <div className="admin-card-thumbnail" style={{width: '280px', height: '150px', backgroundColor: '#202026', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: '#E84A90', borderRadius: '12px'}}>
+                                        <span style={{fontSize: '2rem', fontWeight: 'bold'}}>{getTextContent(6, 'R$ 15k')}</span>
+                                        <span style={{fontSize: '1rem', color: '#8A8A9E'}}>Estatísticas</span>
                                     </div>
-                                    <div className="admin-card-details">
-                                        <h3 style={{color: '#E84A90', fontWeight: 'bold'}}>Valores</h3>
-                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.1rem'}}>Contadores e Estatísticas</h4>
-                                        <p>Gerencie os contadores exibidos na página (Doações: {getTextContent(6, '-')}, Associadas: {getTextContent(7, '-')}, Vendas: {getTextContent(8, '-')}).</p>
+                                    <div className="admin-card-details" style={{marginLeft: '12px'}}>
+                                        <h3 style={{color: '#E84A90', fontWeight: '700', fontSize: '1.5rem', marginBottom: '8px'}}>Valores</h3>
+                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.2rem', fontWeight: '600'}}>Contadores e Estatísticas</h4>
+                                        <p style={{fontSize: '1.1rem', color: '#FFFFFF', opacity: 0.8}}>Gerencie os contadores exibidos na página (Doações: {getTextContent(6, '-')}, Associadas: {getTextContent(7, '-')}, Vendas: {getTextContent(8, '-')}).</p>
                                     </div>
                                 </div>
                                 <div className="admin-card-actions">
                                     <button className="admin-circle-btn" onClick={openValuesModal}>
-                                        <Edit3 size={18} />
+                                        <Edit3 size={24} />
                                     </button>
                                 </div>
                             </div>
@@ -476,19 +482,19 @@ export default function Admin() {
                                 <div className="admin-card-info">
                                     <div className="admin-card-thumbnail" style={{
                                         backgroundImage: `url('${activities[0] ? activities[0].img : ''}')`,
-                                        width: '180px', height: '100px'
+                                        width: '280px', height: '150px', borderRadius: '12px'
                                     }}>
-                                        {activities.length === 0 && <ImageIcon size={30} />}
+                                        {activities.length === 0 && <ImageIcon size={40} />}
                                     </div>
-                                    <div className="admin-card-details">
-                                        <h3 style={{color: '#E84A90', fontWeight: 'bold'}}>Atividades</h3>
-                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.1rem'}}>Gerenciar Atividades</h4>
-                                        <p>Gerencie as {activities.length} atividades cadastradas no site.</p>
+                                    <div className="admin-card-details" style={{marginLeft: '12px'}}>
+                                        <h3 style={{color: '#E84A90', fontWeight: '700', fontSize: '1.5rem', marginBottom: '8px'}}>Atividades</h3>
+                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.2rem', fontWeight: '600'}}>Gerenciar Atividades</h4>
+                                        <p style={{fontSize: '1.1rem', color: '#FFFFFF', opacity: 0.8}}>Gerencie as {activities.length} atividades cadastradas no site.</p>
                                     </div>
                                 </div>
                                 <div className="admin-card-actions">
                                     <button className="admin-circle-btn" onClick={openActivitiesModal}>
-                                        <Edit3 size={18} />
+                                        <Edit3 size={24} />
                                     </button>
                                 </div>
                             </div>
@@ -498,19 +504,19 @@ export default function Admin() {
                                 <div className="admin-card-info">
                                     <div className="admin-card-thumbnail" style={{
                                         backgroundImage: `url('${posts[0] ? posts[0].img : ''}')`,
-                                        width: '180px', height: '100px'
+                                        width: '280px', height: '150px', borderRadius: '12px'
                                     }}>
-                                        {posts.length === 0 && <Heart size={30} color="#E84A90" />}
+                                        {posts.length === 0 && <Heart size={40} color="#E84A90" />}
                                     </div>
-                                    <div className="admin-card-details">
-                                        <h3 style={{color: '#E84A90', fontWeight: 'bold'}}>Testemunhos</h3>
-                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.1rem'}}>Gerenciar Depoimentos</h4>
-                                        <p>Gerencie os {posts.length} testemunhos exibidos no carrossel.</p>
+                                    <div className="admin-card-details" style={{marginLeft: '12px'}}>
+                                        <h3 style={{color: '#E84A90', fontWeight: '700', fontSize: '1.5rem', marginBottom: '8px'}}>Testemunhos</h3>
+                                        <h4 style={{color: '#FFFFFF', margin: '4px 0', fontSize: '1.2rem', fontWeight: '600'}}>Gerenciar Depoimentos</h4>
+                                        <p style={{fontSize: '1.1rem', color: '#FFFFFF', opacity: 0.8}}>Gerencie os {posts.length} testemunhos exibidos no carrossel.</p>
                                     </div>
                                 </div>
                                 <div className="admin-card-actions">
                                     <button className="admin-circle-btn" onClick={openPostsModal}>
-                                        <Edit3 size={18} />
+                                        <Edit3 size={24} />
                                     </button>
                                 </div>
                             </div>

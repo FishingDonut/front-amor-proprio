@@ -23,10 +23,15 @@ export default function Testimonials({ texts, testimonials }) {
             <div className="container">
                 <div className="testimonials-header">
                     <div className="testimonials-icon">
-                        <Heart style={{ fill: 'var(--primary-pink)', color: 'var(--primary-pink)', width: '64px', height: '64px' }} />
+                        <img src="/assets/coracao-testemunha.png" alt="Coração" style={{ width: '80px', height: 'auto' }} />
                     </div>
                     <h2>Testemunhos</h2>
                     <p>Historias reais de mulheres e apoiadores que fazem parte da nossa missão. Cada palavra nos inspira a continuar acolhendo, cuidando e transformando vidas</p>
+                    <div className="testimonial-quote-divider" style={{ marginTop: '24px', marginBottom: '0' }}>
+                        <img src="/assets/linha-testemunha-aspa.png" alt="linha" className="quote-line" />
+                        <img src="/assets/aspas-testemunha.png" alt="aspas" className="quote-icon" />
+                        <img src="/assets/linha-testemunha-aspa.png" alt="linha" className="quote-line" />
+                    </div>
                 </div>
 
                 <div className="carousel-container">
@@ -45,9 +50,6 @@ export default function Testimonials({ texts, testimonials }) {
                             ) : (
                                 displayTestimonials.map((test, idx) => (
                                     <div key={idx} className="carousel-slide">
-                                        <div className="testimonial-quote-icon">
-                                            <img src="/assets/aspas-testemunha.png" alt="aspas" style={{ width: '40px', height: 'auto' }} />
-                                        </div>
                                         <p className="testimonial-message">{test.message || test.mensage || ""}</p>
                                         <div className="testimonial-divider">
                                             <img src="/assets/coracao-testemunha.png" alt="coração" style={{ width: '20px', height: 'auto' }} />
@@ -87,10 +89,10 @@ export default function Testimonials({ texts, testimonials }) {
                     </div>
                 </div>
             </div>
-            {/* Ribbon Background watermark SVG */}
-            <svg className="testimonials-watermark" viewBox="0 0 100 100" fill="currentColor">
-                <path d="M50,10 C36.2,10 25,21.2 25,35 C25,44.5 30.5,52.8 38.5,56.8 L20,90 L35,90 L46.5,69 L53.5,69 L65,90 L80,90 L61.5,56.8 C69.5,52.8 75,44.5 75,35 C75,21.2 63.8,10 50,10 Z M50,22 C57.2,22 63,27.8 63,35 C63,42.2 57.2,48 50,48 C42.8,48 37,42.2 37,35 C37,27.8 42.8,22 50,22 Z" />
-            </svg>
+            {/* Ribbon Background watermark IMAGE */}
+            <div className="testimonials-watermark-img">
+                <img src="/assets/fita-rosa.png" alt="Marca d'água Fita Rosa" />
+            </div>
         </section>
     );
 }

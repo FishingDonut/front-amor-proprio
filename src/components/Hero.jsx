@@ -3,13 +3,6 @@ import React from 'react';
 export default function Hero({ texts }) {
     return (
         <section className="hero" id="inicio">
-            {/* Background Watermarks */}
-            <div className="hero-hands-watermark">
-                <img src="/assets/foto-fundo.png" alt="Desenho de mãos" />
-            </div>
-            <div className="hero-ribbon-watermark">
-                <img src="/assets/fita-rosa.png" alt="Fita Rosa" />
-            </div>
             <div className="container">
                 <div className="hero-wrapper">
                     <div className="hero-content">
@@ -26,7 +19,7 @@ export default function Hero({ texts }) {
                             <img src={texts.heroImage} alt="Banner Principal" />
                         ) : (
                             <div style={{ width: '100%', height: '400px', backgroundColor: '#fdf2f8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <span style={{ color: '#e84a90', fontWeight: 'bold' }}>Amor Próprio</span>
+                                <span style={{ color: '#ce97a5', fontWeight: 'bold' }}>Amor Próprio</span>
                             </div>
                         )}
                     </div>

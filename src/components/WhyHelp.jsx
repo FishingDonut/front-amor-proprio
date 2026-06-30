@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart, Gift, Activity, BookOpen } from 'lucide-react';
 
-export default function WhyHelp({ texts, icons }) {
+export default function WhyHelp({ id, texts, icons }) {
     // Default icons if none provided via API
     const defaultIcons = {
         why1: <Heart size={40} strokeWidth={2.5} />,
@@ -11,7 +11,7 @@ export default function WhyHelp({ texts, icons }) {
     };
 
     return (
-        <section className="why" style={{position: 'relative', overflow: 'hidden'}}>
+        <section id={id || "como-ajudar"} className="why" style={{position: 'relative', overflow: 'hidden'}}>
             <div className="why-background-layer">
                 <img src="/assets/foto-fundo.png" alt="Fundo Decorativo" />
             </div>

@@ -89,7 +89,7 @@ export default function Home() {
 
                 // Add video to mapped texts BEFORE setTexts
                 mappedTexts.aboutVideo = getMediaUrl(7);
-                
+
                 setTexts(mappedTexts);
 
                 const mappedMedia = {
@@ -137,15 +137,26 @@ export default function Home() {
         fetchData();
     }, []);
 
-    if (loading) return <div style={{display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', fontFamily: 'Outfit'}}>Carregando...</div>;
+    if (loading) return <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', fontFamily: 'Outfit' }}>Carregando...</div>;
+
+    const getSectionIdFromLink = (link) => {
+        if (!link) return 'como-ajudar';
+        const hashIndex = link.indexOf('#');
+        if (hashIndex !== -1) {
+            return link.substring(hashIndex + 1);
+        }
+        return 'como-ajudar';
+    };
+
+    const whyHelpId = getSectionIdFromLink(texts.btn2Link);
 
     return (
         <div>
             <Navbar logoUrl={media.logo} donateLink={texts.btn2Link} />
-            <Hero texts={{...texts, heroImage: media.hero}} />
+            <Hero texts={{ ...texts, heroImage: media.hero }} />
             <About texts={texts} />
             <Stats texts={texts} />
-            <WhyHelp texts={texts} icons={media.icons} />
+            <WhyHelp id={whyHelpId} texts={texts} icons={media.icons} />
             <Activities activities={activities} />
             <Testimonials texts={texts} testimonials={testimonials} />
             <Footer texts={texts} logoUrl={media.logo} />

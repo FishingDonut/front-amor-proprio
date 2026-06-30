@@ -21,11 +21,11 @@ export default function Navbar({ logoUrl, donateLink }) {
                         <li><a href="#sobre-nos" onClick={() => setIsOpen(false)}>Sobre Nós</a></li>
                         <li><a href="#atividades" onClick={() => setIsOpen(false)}>Atividades</a></li>
                         <li><a href="#testemunhos" onClick={() => setIsOpen(false)}>Testemunhos</a></li>
-                        <li>
+                        {/* <li>
                             <a href={donateLink || "https://wa.me/5547999782324"} className="btn-nav-donate" onClick={() => setIsOpen(false)}>
                                 Doe Agora
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </div>

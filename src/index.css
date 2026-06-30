@@ -193,6 +193,7 @@ nav ul a:hover, nav ul a.active {
     position: relative;
     z-index: 5;
     text-align: left;
+    padding-bottom: 60px;
 }
 
 .hero-tag {
